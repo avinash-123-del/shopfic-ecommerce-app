@@ -54,8 +54,8 @@ const SignupForm = () => {
         </div>
 
         <div className='flex justify-between items-center'>
-                    <img className='md:w-[200px] xl:w-[200px] lg:w-[150px] ' src="/gril.png" alt="" />
-                    <img className='md:w-[300px] xl:w-[300px] lg:w-[200px] ' src="/boy.png" alt="" />
+                    <img className='md:w-[200px] xl:w-[200px] lg:w-[150px] w-[150px] ' src="/gril.png" alt="" />
+                    <img className='md:w-[300px] xl:w-[300px] lg:w-[200px] w-[200px] ' src="/boy.png" alt="" />
                 </div> 
       </form>
 
