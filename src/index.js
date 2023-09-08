@@ -15,7 +15,7 @@ root.render(
     <ProductDataProvider>
       <BrowserRouter>
         <App />
-        <ToastContainer autoClose={1000} position='top-left' closeOnClick theme='dark' />
+        <ToastContainer autoClose={1000} position='bottom-right' closeOnClick theme='dark' />
       </BrowserRouter>
     </ProductDataProvider>
   </Provider>

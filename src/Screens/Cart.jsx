@@ -64,12 +64,14 @@ const Cart = () => {
     <div className="">
       {cartItems.length !== 0 ? (
         <div>
+
           <div className='flex justify-end'>
             <button
               className='border-2 focus:outline-none hover:scale-105  duration-200 rounded-md font-poppins text-stone-700 bg-yellow-500 hover:bg-yellow-600 font-semibold '
               onClick={() => nav('/checkout')}>proceed to checkout</button>
           </div>
-          <div className="grid md:grid-cols-1 lg:grid-cols-2 justify-center w-full">
+
+          <div className="grid grid-cols-1 lg:grid-cols-2 justify-center w-full">
             {cartItems.map((product) => (
               <div
                 className=" my-6 border w-[95%] m-auto py-4 px-2 rounded-md shadow-xl flex flex-col md:flex-row justify-around md:items-center md:gap-4"

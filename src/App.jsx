@@ -13,7 +13,7 @@ const App = () => {
   const { isLoggedIn } = useContext(ProductDataContext)
   return (
     <div >
-      {isLoggedIn && <Navbar />}
+      {(isLoggedIn || localStorage.getItem('email')) && <Navbar />}
       <Routes >
         <Route path='/' element={<LoginPage />} />
         <Route path='/signup' element={<SignupForm />} />
