@@ -2,8 +2,6 @@ import React, { useContext } from 'react'
 import { LiaOpencart } from 'react-icons/lia'
 import { Link, useNavigate } from 'react-router-dom'
 import { useSelector } from 'react-redux'
-// import {HiOutlineMenuAlt3} from 'react-icons/hi'
-// import { IoMdClose} from 'react-icons/io'
 import { AiOutlinePoweroff, AiOutlineHome, AiOutlineShoppingCart } from 'react-icons/ai'
 import { ProductDataContext } from './ContextProvider'
 import { toast } from 'react-toastify'
@@ -18,6 +16,7 @@ const Navbar = () => {
     const avtaar = localStorage.getItem('email')
 
     const nav = useNavigate()
+    
     const handleLogout = () => {
         localStorage.clear()
         toast.success('logged out')
@@ -63,7 +62,8 @@ const Navbar = () => {
                         </div>
                     </Link>
                 ))}
-                <h3 className='px-2 py-[2px] rounded-full text-stone-100 border-2 border-orange-700 bg-gray-800'>{avtaar.substr(0, 1).toUpperCase()}</h3>
+                {/* <h3 className='px-2 py-[2px] rounded-full text-stone-100 border-2 border-orange-700 bg-gray-800'>{avtaar.substr(0, 1).toUpperCase()}</h3> */}
+                <h3 className='px-2 py-[2px] rounded-full text-stone-100 border-2 border-orange-700 bg-gray-800'>{avtaar}</h3>
             </div>
 
 
@@ -75,7 +75,8 @@ const Navbar = () => {
                     <span className='absolute top-[-7px] right-[-5px] bg-red-700 px-1 text-[10px] text-stone-100 rounded-full'>{CartItems.length}</span>
                     </Link></li>
                     <li><Link to='/'><AiOutlinePoweroff size={20} color='green' onClick={handleLogout}/></Link></li>
-                    <h3 className='px-2 py-[2px] rounded-full text-stone-100 border-2 border-orange-700 bg-gray-800'>{avtaar.substr(0, 1).toUpperCase()}</h3>
+                    {/* <h3 className='px-2 py-[2px] rounded-full text-stone-100 border-2 border-orange-700 bg-gray-800'>{avtaar.substr(0, 1).toUpperCase()}</h3> */}
+                    <h3 className='px-2 py-[2px] rounded-full text-stone-100 border-2 border-orange-700 bg-gray-800'>{avtaar}</h3>
                 </ul>
             </div>
 

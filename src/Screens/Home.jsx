@@ -25,7 +25,6 @@ function App() {
     const nav = useNavigate()
     useEffect(() => {
         const userEmail = localStorage.getItem('email')
-        console.log(userEmail);
         if (userEmail === null) {
             toast.warn('please login')
                 nav('/')

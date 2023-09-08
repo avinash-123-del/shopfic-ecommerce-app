@@ -21,14 +21,12 @@ const LoginForm = () => {
         e.preventDefault()
         const data = await axios.post(`${BASE_URL}/login`, loginData)
             .then(data => data)
-        console.log(data);
         if (data?.data?.status === 200) {
             toast.success('logged in')
             setisLoggedIn(true)
             localStorage.setItem('email', loginData.email)
             nav('/home')
         }
-        console.log('status', data?.data?.status);
         if (data?.data?.status === 501) {
             toast.error('password not matched')
         }

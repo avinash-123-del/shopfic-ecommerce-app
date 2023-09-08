@@ -6,6 +6,10 @@
     .flex-r>{
         @apply flex justify-start items-center bg-gray-400
     }
+
+    .input>input{
+    @apply border-2 px-2 py-1 rounded-md w-[80%]
+    }
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Aclonica&family=Courgette&family=Lilita+One&display=swap')

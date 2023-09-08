@@ -8,8 +8,6 @@ export const userSlice = createSlice({
     reducers: {
         addItem(state, action) {
             state.push(action.payload)   //jo bhi action hua hoga usko push krdena
-            console.log("state",...state);
-            console.log("state length",state.length);
         },
         removeItem(state, action) {
             state.splice(action.payload, 1) //(datafromUser , no. of data to del)
@@ -18,8 +16,6 @@ export const userSlice = createSlice({
     },
   
 })
-
-console.log("use slice name", userSlice.actions);
 
 //export {userSlice}      //export slice
 
