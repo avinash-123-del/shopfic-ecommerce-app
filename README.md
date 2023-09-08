@@ -28,4 +28,8 @@ Shopfic E-Commerce App Features:
 6. **Expandable Functionality:**
    - The app has potential for further features and enhancements.
 
+7. **GitHub Branches:**
+   - The client-side (frontend) code is added to the "main" branch of GitHub.
+   - The server-side (backend) code is added to the "backend" branch of GitHub.
+
 You can find the published web page of your Shopfic E-Commerce app at [https://shopfic-e-avinash.netlify.app/](https://shopfic-e-avinash.netlify.app/).
