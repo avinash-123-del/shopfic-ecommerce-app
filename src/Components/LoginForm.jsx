@@ -6,7 +6,8 @@ import { toast } from 'react-toastify'
 
 
 const LoginForm = () => {
-
+    
+    const BASE_URL = 'https://shopfic-e-app.onrender.com'
     const { setAuth, setisLoggedIn } = useContext(ProductDataContext)
 
     const [loginData, setLoginData] = useState({ email: '', password: '' })
@@ -18,20 +19,20 @@ const LoginForm = () => {
     const nav = useNavigate()
     const hanldeSubmit = async (e) => {
         e.preventDefault()
-        const data = await axios.post('http://localhost:5000/login', loginData)
+        const data = await axios.post(`${BASE_URL}/login`, loginData)
             .then(data => data)
-            console.log(data);
+        console.log(data);
         if (data?.data?.status === 200) {
             toast.success('logged in')
             setisLoggedIn(true)
             localStorage.setItem('email', loginData.email)
             nav('/home')
         }
-        console.log('status',data?.data?.status);
-        if(data?.data?.status === 501){
+        console.log('status', data?.data?.status);
+        if (data?.data?.status === 501) {
             toast.error('password not matched')
         }
-        if(data?.data?.status === 401){
+        if (data?.data?.status === 401) {
             toast.error('Invalid Credentials please signup')
         }
     }
@@ -60,9 +61,8 @@ const LoginForm = () => {
                 <div className='flex justify-between items-center'>
                     <img className='md:w-[200px] xl:w-[200px] lg:w-[150px] w-[150px]' src="/gril.png" alt="" />
                     <img className='md:w-[300px] xl:w-[300px] lg:w-[200px] w-[200px]' src="/boy.png" alt="" />
-                </div> 
+                </div>
             </form>
-
         </div>
     )
 }

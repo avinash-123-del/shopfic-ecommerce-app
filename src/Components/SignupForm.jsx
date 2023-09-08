@@ -5,6 +5,8 @@ import { toast } from 'react-toastify'
 
 const SignupForm = () => {
 
+  const BASE_URL = 'https://shopfic-e-app.onrender.com'
+
   const { setAuth } = useContext(ProductDataContext)
 
   const [registerData, setregisterData] = useState({ email: '', password: '', confirmPassword: '' })
@@ -17,7 +19,7 @@ const SignupForm = () => {
     e.preventDefault()
     if(registerData.password === registerData.confirmPassword){
       try {
-        await axios.post('http://localhost:5000/signup',  registerData )
+        await axios.post(`${BASE_URL}/signup`,  registerData )
         .then(auth => setAuth(true))
         console.log('user registered');
       } catch (error) {
