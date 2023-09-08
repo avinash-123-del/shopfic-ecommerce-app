@@ -21,7 +21,7 @@ const LoginPage = () => {
   return (
     <div className='lg:flex justify-around items-start relative h-screen overflow-hidden pt-5'>
 
-      <div className='flex flex-col justify-center items-start z-10 lg:pl-20 pl-4 lg:w-[70%] xl:w-full'>
+      <div className='flex flex-col justify-center items-start z-10 lg:pl-20 text-sm pl-2 lg:w-[70%] xl:w-full'>
         <div className='flex items-center font-lilita justify-start w-[480px] '>
           <h1 className='text-[30px] font-bold'>Shopfic </h1>
           <span><LiaOpencart color='green' size={50} /></span>
@@ -40,7 +40,7 @@ const LoginPage = () => {
       </div>
       
       <span className='animate-trolly absolute bottom-[50px] md:bottom-0 left-0 w-screen z-10'>
-        <img className='w-[200px] ' src="/trolly.png" alt="" />
+        <img className='md:w-[200px] w-[100px] ' src="/trolly.png" alt="" />
       </span>
 
 

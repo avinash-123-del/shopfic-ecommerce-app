@@ -149,7 +149,7 @@ function App() {
 
                 </div>
             ) : (
-                <div className="grid ml-[40px] sm:ml-[60px] sm:grid-cols-1 col-span-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 
+                <div className="grid justify-center sm:ml-[60px] sm:grid-cols-1 col-span-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 
                ">
                     {filteredProducts.map((product, index) => (
                         <ProductCard key={index} product={product} />
