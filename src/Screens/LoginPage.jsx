@@ -25,7 +25,7 @@ const LoginPage = () => {
         <div className='flex items-center font-lilita justify-start w-[480px] '>
           <h1 className='text-[30px] font-bold'>Shopfic </h1>
           <span><LiaOpencart color='green' size={50} /></span>
-          <h3 className='px-5 pt-5'>Fashion for Every Occasion</h3>
+          <h3 className='md:px-5 px-2 pt-5'>Fashion for Every Occasion</h3>
         </div>
 
         <div className='mt-[100px] w-[75%] hidden lg:inline'>
