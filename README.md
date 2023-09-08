@@ -1,70 +1,31 @@
-# Getting Started with Create React App
+Shopfic E-Commerce App Features:
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+1. **Authentication and Authorization:**
+   - Users can sign up and log in with full authentication.
+   - Returning users are seamlessly redirected to the homepage.
 
-## Available Scripts
+2. **Homepage:**
+   - Displays a list of products fetched from a JSON API.
+   - Users can filter products by category, price range, or ratings.
+   - If no products match the filter criteria, a message is shown.
+   - Users can add products to their wishlist by clicking a heart icon.
+   - The number of wishlist items is displayed on the navbar.
 
-In the project directory, you can run:
+3. **Cart Section:**
+   - Users can view and manage their wishlist items.
+   - They can adjust the quantity of each product, updating the price accordingly.
+   - Users can add or remove items from the cart.
 
-### `npm start`
+4. **Checkout Page:**
+   - Users proceed to checkout, providing shipping and payment details.
+   - The bill summary, including itemized prices, is shown.
+   - Users can review their order before proceeding.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+5. **Invoice Page:**
+   - After confirming the order, users are redirected to an invoice page.
+   - The invoice lists the selected items, their quantities, and the total price.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+6. **Expandable Functionality:**
+   - The app has potential for further features and enhancements.
 
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+You can find the published web page of your Shopfic E-Commerce app at [https://shopfic-e-avinash.netlify.app/](https://shopfic-e-avinash.netlify.app/).
