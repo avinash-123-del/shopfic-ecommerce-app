@@ -4,6 +4,8 @@ import { Outlet, Navigate } from 'react-router-dom'
 import { toast } from 'react-toastify'
 const AppScreen = () => {
 
+//Protecting Routes
+
     const { isLoggedIn } = useContext(ProductDataContext)
 
     if (!isLoggedIn) {
