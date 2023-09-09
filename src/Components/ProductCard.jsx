@@ -4,6 +4,7 @@ import { AiOutlineHeart, AiTwotoneHeart } from 'react-icons/ai'
 import { useDispatch,useSelector } from 'react-redux'
 import { addItem, removeItem } from '../store/slices/userSlice'
 import { toast } from 'react-toastify'
+import { Link } from 'react-router-dom' 
 
 const ProductCard = ({ product }) => {
 
@@ -25,8 +26,9 @@ function handleRemoveItem(){
     return (
         <div key={product.id} className="text-sm w-[300px] my-6 border py-4 px-2 rounded-md shadow-xl hover:scale-110 overflow-hidden duration-200">
             <div className='flex justify-center'>
-                <img className='h-[220px] w-[200px] cursor-pointer'
+               <Link to={`/shopfic/home/product/${product.id}`}> <img className='h-[220px] w-[200px] cursor-pointer'
                     src={product.image} alt={product.title} />
+                    </Link>
             </div>
             <h2 className='font-bold pt-2'>{product.title.substr(0, 40)}</h2>
             <div className='flex justify-between items-center py-2'>

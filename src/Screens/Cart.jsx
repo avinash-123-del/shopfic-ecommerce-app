@@ -5,7 +5,8 @@ import EmptyCart from '../Components/EmptyCart';
 import { useDispatch, useSelector } from 'react-redux';
 import { removeItem } from '../store/slices/userSlice';
 import { ProductDataContext } from '../Components/ContextProvider';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate , Link } from 'react-router-dom';
+
 
 const Cart = () => {
 
@@ -78,11 +79,13 @@ const Cart = () => {
                 key={product.id}
               >
                 <div className="flex justify-center">
+                 <Link to={`/shopfic/home/product/${product.id}`}>
                   <img
                     className="md:h-[220px] md:w-[200px] h-[100px] cursor-pointer"
                     src={product.image}
                     alt={product.title}
                   />
+                  </Link>
                 </div>
 
                 <div className="flex flex-col md:gap-3 text-sm md:text-base">
