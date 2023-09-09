@@ -6,7 +6,8 @@ import { toast } from 'react-toastify'
 
 
 const LoginForm = () => {
-    
+
+    const [loginBtn, setLoginbtn] = useState(false)
     const BASE_URL = 'https://shopfic-e-app.onrender.com'
     const { setAuth, setisLoggedIn } = useContext(ProductDataContext)
 
@@ -19,19 +20,28 @@ const LoginForm = () => {
     const nav = useNavigate()
     const hanldeSubmit = async (e) => {
         e.preventDefault()
-        const data = await axios.post(`${BASE_URL}/login`, loginData)
-            .then(data => data)
-        if (data?.data?.status === 200) {
-            toast.success('logged in')
-            setisLoggedIn(true)
-            localStorage.setItem('email', loginData.email)
-            nav('/home')
-        }
-        if (data?.data?.status === 501) {
-            toast.error('password not matched')
-        }
-        if (data?.data?.status === 401) {
-            toast.error('Invalid Credentials please signup')
+
+        try {
+            setLoginbtn(true)
+            const data = await axios.post(`${BASE_URL}/login`, loginData)
+                .then(data => data)
+            if (data?.data?.status === 200) {
+                toast.success('logged in')
+                setisLoggedIn(true)
+                localStorage.setItem('email', loginData.email)
+                nav('/shopfic/home')
+            }
+            if (data?.data?.status === 501) {
+                toast.error('password not matched')
+            }
+            if (data?.data?.status === 401) {
+                toast.error('Invalid Credentials please signup')
+            }
+            setLoginbtn(false)
+        } catch (error) {
+            console.log('error in login', error);
+        }finally{
+            setLoginbtn(false)
         }
     }
 
@@ -52,7 +62,7 @@ const LoginForm = () => {
 
                 <div className='flex justify-start items-center py-4'>
 
-                    <button type="submit" className="text-white bg-green-700 hover:bg-green-800 focus:ring-4 focus:outline-none focus:ring-green-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800">Login</button>
+                    <button type="submit" className="text-white bg-green-700 hover:bg-green-800 focus:ring-4 focus:outline-none focus:ring-green-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800">{loginBtn ? 'please wait...' : 'Login'}</button>
                     <p >please <span className='italic text-blue-600 cursor-pointer' onClick={() => setAuth(false)}>signup</span> to register</p>
                 </div>
 

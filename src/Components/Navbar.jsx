@@ -1,6 +1,6 @@
 import React, { useContext } from 'react'
 import { LiaOpencart } from 'react-icons/lia'
-import { Link, useNavigate } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import { useSelector } from 'react-redux'
 import { AiOutlinePoweroff, AiOutlineHome, AiOutlineShoppingCart } from 'react-icons/ai'
 import { ProductDataContext } from './ContextProvider'
@@ -8,19 +8,15 @@ import { toast } from 'react-toastify'
 const Navbar = () => {
 
     const { setisLoggedIn } = useContext(ProductDataContext)
-
     const CartItems = useSelector((state) => {
         return state.user
     })
 
     const avtaar = localStorage.getItem('email')
 
-    const nav = useNavigate()
-
     const handleLogout = () => {
         localStorage.clear()
         toast.success('logged out')
-        nav('/')
         setisLoggedIn(false)
     }
 
@@ -29,13 +25,13 @@ const Navbar = () => {
             id: 1,
             icon: <AiOutlineHome size={20} />,
             name: 'Home',
-            link: '/home'
+            link: '/shopfic/home'
         },
         {
             id: 2,
             icon: <AiOutlineShoppingCart size={20} />,
             name: `Cart ${CartItems.length}`,
-            link: '/cart'
+            link: '/shopfic/cart'
         },
         {
             id: 3,

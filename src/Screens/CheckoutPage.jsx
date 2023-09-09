@@ -44,7 +44,7 @@ const CheckoutPage = () => {
         toast.error('please fill all data')
     }
     else{
-        nav('/invoice')
+        nav('/shopfic/invoice')
         toast.success('Congratulations! your order has been placed')
     }
     }

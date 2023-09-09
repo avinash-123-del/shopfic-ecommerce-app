@@ -1,29 +1,28 @@
 import React, { useContext } from 'react'
 import './index.css'
-import Home from './Screens/Home'
 import { Routes, Route } from 'react-router-dom'
-import Cart from './Screens/Cart'
 import Navbar from './Components/Navbar'
-import LoginPage from './Screens/LoginPage'
-import SignupForm from './Components/SignupForm'
-import { ProductDataContext } from './Components/ContextProvider'
+import Home from './Screens/Home'
+import Cart from './Screens/Cart'
 import CheckoutPage from './Screens/CheckoutPage'
 import Invoice from './Screens/Invoice'
+import LoginPage from './Screens/LoginPage'
+import { ProductDataContext } from './Components/ContextProvider'
+import AppScreen from './AppScreen/AppScreen'
 const App = () => {
   const { isLoggedIn } = useContext(ProductDataContext)
   return (
     <div >
-      {(isLoggedIn || localStorage.getItem('email')) && <Navbar />}
+      {(isLoggedIn || localStorage.getItem('email'))  && <Navbar />}
       <Routes >
         <Route path='/' element={<LoginPage />} />
-        <Route path='/signup' element={<SignupForm />} />
-        <Route path='/home' element={<div className='mt-10 w-[95%] m-auto'><Home /></div>} />
-        <Route path='/cart' element={<div className='mt-10 w-[95%] m-auto'><Cart /></div>} />
-        <Route path='/checkout' element={<div className='mt-10 w-[95%] m-auto'><CheckoutPage /></div>} />
-        <Route path='/invoice' element={<div className='mt-10 w-[95%] m-auto'><Invoice /></div>} />
-
+        <Route path='/shopfic' element={<AppScreen />} >
+          <Route path='home' element={<div className='mt-10 w-[95%] m-auto'><Home /></div>} />
+          <Route path='cart' element={<div className='mt-10 w-[95%] m-auto'><Cart /></div>} />
+          <Route path='checkout' element={<div className='mt-10 w-[95%] m-auto'><CheckoutPage /></div>} />
+          <Route path='invoice' element={<div className='mt-10 w-[95%] m-auto'><Invoice /></div>} />
+        </Route>
       </Routes>
-
     </div>
   )
 }

@@ -4,8 +4,6 @@ import { LiaOpencart } from 'react-icons/lia'
 import '../App.css'
 import ProductCard from '../Components/ProductCard';
 import { ProductDataContext } from '../Components/ContextProvider';
-import { useNavigate } from 'react-router-dom';
-import { toast } from 'react-toastify';
 
 function App() {
 
@@ -13,23 +11,12 @@ function App() {
     const [filteredProducts, setFilteredProducts] = useState([]);
 
     const [filters, setFilters] = useState({
-        priceRange: [0, 1000], // Default price range
-        ratingsRange: [0, 5], // Default ratings range
+        priceRange: [0, 1000],
+        ratingsRange: [0, 5], 
         category: '',
     });
 
-
     const { products, loading, setLoading } = useContext(ProductDataContext)
-
-    // Function to filter products
-    const nav = useNavigate()
-    useEffect(() => {
-        const userEmail = localStorage.getItem('email')
-            if (userEmail === null) {
-            toast.warn('please login')
-                nav('/')
-        }
-    }, [nav])
 
     const filterProducts = useCallback(() => {
         const [minPrice, maxPrice] = filters.priceRange;
@@ -57,7 +44,6 @@ function App() {
 
     return (
         <>
-        
         {loading ? <div className='flex flex-col justify-center items-center mt-[250px]'>
         <div className="sm:w-20 sm:h-20 w-8 h-8 rounded-full animate-spin 
         border-x-8 border-solid border-red-800 border-t-transparent m-auto"></div>

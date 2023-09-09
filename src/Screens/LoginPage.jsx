@@ -12,7 +12,7 @@ const LoginPage = () => {
   useEffect(() => {
     const email = localStorage.getItem('email')
     if(email){
-      nav('/home')
+      nav('/shopfic/home')
       setisLoggedIn(true)
     }
   },[nav , setisLoggedIn])

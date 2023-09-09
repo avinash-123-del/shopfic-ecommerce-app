@@ -68,7 +68,7 @@ const Cart = () => {
           <div className='flex justify-end'>
             <button
               className='border-2 focus:outline-none hover:scale-105  duration-200 rounded-md font-poppins text-stone-700 bg-yellow-500 hover:bg-yellow-600 font-semibold '
-              onClick={() => nav('/checkout')}>proceed to checkout</button>
+              onClick={() => nav('/shopfic/checkout')}>proceed to checkout</button>
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 justify-center w-full">
