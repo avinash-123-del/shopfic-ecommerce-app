@@ -8,8 +8,7 @@ const AppScreen = () => {
 
     const { isLoggedIn } = useContext(ProductDataContext)
 
-    if (!isLoggedIn) {
-
+    if (!isLoggedIn && (!localStorage.getItem('email'))) {
         toast.error('please Login')
         return <Navigate to={'/'} />
     }

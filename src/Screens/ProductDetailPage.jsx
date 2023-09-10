@@ -12,7 +12,6 @@ const ProductDetailPage = () => {
 
     const { products } = useContext(ProductDataContext)
     const item = products.find((e) => e.id === parseInt(id))
-    // console.log(item);
     const nav = useNavigate()
     const dispatch = useDispatch()
 

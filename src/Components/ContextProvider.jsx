@@ -10,9 +10,13 @@ export function ProductDataProvider({ children }) {
   const [auth, setAuth] = useState(false);
   const [isLoggedIn, setisLoggedIn] = useState(false);
   const [addFav, setAddFav] = useState()
+  const [itemQuantity, setitemQuantity] = useState()
   const [totalAmount , setTotalAmount] = useState()
+  const [paymentMethod , setpaymentMethod] = useState()
+  const [offerSelected , setofferSelected] = useState(null)
 
-  const [input, setInput] = useState({ customerName: '', email: '', mobileNum: '', country: '', address: '', city: '', payment: '' })
+
+  const [input, setInput] = useState({ customerName: '', email: '', mobileNum: '', country: '', address: '', city: '' })
 
 
   const fetchProducts = () => {
@@ -36,7 +40,7 @@ export function ProductDataProvider({ children }) {
 
   const value = {
     products,
-    loading,setLoading,addFav, setAddFav,auth, setAuth,isLoggedIn,itemCard, setitemCard, totalAmount , setTotalAmount,
+    loading,setLoading,addFav,itemQuantity,offerSelected , setofferSelected,paymentMethod , setpaymentMethod, setitemQuantity, setAddFav,auth, setAuth,isLoggedIn,itemCard, setitemCard, totalAmount , setTotalAmount,
     setisLoggedIn,input, setInput,
     fetchProducts, // You can expose the fetch function if needed
   };

@@ -45,7 +45,7 @@ const Navbar = () => {
         <div className='shadow-lg py-3 px-6 md:px-[50px] flex justify-between items-center w-screen '>
 
             <div className='flex items-center font-lilita justify-start'>
-                <Link to='/home'><h1 className='text-[30px] font-bold'>Shopfic </h1></Link>
+                <Link to='/shopfic/home'><h1 className='text-[30px] font-bold'>Shopfic </h1></Link>
                 <span><LiaOpencart color='green' size={50} /></span>
             </div>
 

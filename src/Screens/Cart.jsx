@@ -1,22 +1,39 @@
-import React, { useContext, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import { FaTrashRestoreAlt } from 'react-icons/fa';
 import { toast } from 'react-toastify';
 import EmptyCart from '../Components/EmptyCart';
 import { useDispatch, useSelector } from 'react-redux';
 import { removeItem } from '../store/slices/userSlice';
 import { ProductDataContext } from '../Components/ContextProvider';
-import { useNavigate , Link } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 
 
 const Cart = () => {
 
   const items = useSelector(item => item.user)
 
-  const { setTotalAmount, setitemCard } = useContext(ProductDataContext)
+  const { setTotalAmount, setitemCard, setitemQuantity} = useContext(ProductDataContext)
 
-  const [cartItems, setCartItems] = useState([
-    ...items
-  ]);
+  // const [cartItems, setCartItems] = useState([
+  //   ...items
+  // ]);
+
+  const [cartItems, setCartItems] = useState(() => {
+
+    //set default quantity = 1
+    const updatedItems = items.map((item) => ({
+      ...item,
+      quantity: item?.quantity || 1,
+    }));
+    return updatedItems;
+  });
+
+
+  // const totalAmount = value.reduce((acc, currentValue) => acc + currentValue, 0);
+
+  useEffect(() => {
+    setitemQuantity(cartItems.reduce((acc, item) => acc + (item?.quantity || 1), 0))
+  }, [cartItems , setitemQuantity])
 
   const nav = useNavigate()
 
@@ -79,12 +96,12 @@ const Cart = () => {
                 key={product.id}
               >
                 <div className="flex justify-center">
-                 <Link to={`/shopfic/home/product/${product.id}`}>
-                  <img
-                    className="md:h-[220px] md:w-[200px] h-[100px] cursor-pointer"
-                    src={product.image}
-                    alt={product.title}
-                  />
+                  <Link to={`/shopfic/home/product/${product.id}`}>
+                    <img
+                      className="md:h-[220px] md:w-[200px] h-[100px] cursor-pointer"
+                      src={product.image}
+                      alt={product.title}
+                    />
                   </Link>
                 </div>
 

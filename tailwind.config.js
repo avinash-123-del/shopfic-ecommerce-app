@@ -9,6 +9,7 @@ module.exports = {
         'poppins': ['Poppins', 'sans-serif'],
         'lilita': ['Courgette', 'sans-serif'],
         'exo': ['Aclonica', 'sans-serif'],
+        'ubunt': ['Ubuntu', 'sans-serif'],
  
       },
       keyframes:{
