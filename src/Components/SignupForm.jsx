@@ -55,7 +55,7 @@ const SignupForm = () => {
           <p >Already have an account, please <span className='italic text-blue-600 cursor-pointer z-40' onClick={() => setAuth(true)}>Login</span></p>
         </div>
 
-        <div className='flex justify-between items-center'>
+        <div className='flex justify-between items-center z-10'>
                     <img className='md:w-[200px] xl:w-[200px] lg:w-[150px] w-[150px] ' src="/gril.png" alt="" />
                     <img className='md:w-[300px] xl:w-[300px] lg:w-[200px] w-[200px] ' src="/boy.png" alt="" />
                 </div> 

@@ -16,12 +16,12 @@ const BillSection = () => {
     return (
         <div className=' rounded-lg shadow-lg p-2 text-[12px] lg:text-base mb-4'>
             <h1 className='text-lg  font-bold text-green-600'>Your Cart Summary:</h1>
-            <div className='h-[1px] bg-gray-800 w-full'></div>
+            <div className='h-[1.5px] bg-gray-800 w-full'></div>
             <div className='mt-5'>
                 <table className='w-full '>
                     <thead >
                         <tr className=''>
-                            <th>Products</th>
+                            <th className='text-start pl-10'>Products</th>
                             <th>Quantity</th>
                             <th>Price</th>
                         </tr>
@@ -46,7 +46,7 @@ const BillSection = () => {
                     {offerSelected !== null ?
                         <div className='relative'>
                             <span>Total price: <span className='font-ubunt text-yellow-700'>${(totalAmount - totalAmount * offerSelected.value).toFixed(2)}</span></span>
-                            <span className='flex justify-center items-center absolute text-green-500 text-[10px] w-full top-5 left-4'>
+                            <span className='flex justify-center items-center absolute text-green-500 text-[10px] w-[150px] top-5 -right-2'>
                                 <TiTick color='greeen' size={20} />
                                 <span >
                                     {offerSelected.coupon} discount applied</span>

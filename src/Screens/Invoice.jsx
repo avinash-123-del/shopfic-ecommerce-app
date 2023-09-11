@@ -10,13 +10,14 @@ const Invoice = () => {
   const nav = useNavigate()
   return (
     <div>
-      <div className='lg:w-[60%] w-[80%] m-auto border-2 border-dashed p-4 border-gray-800 md:text-base text-[10px]'>
-        <div className='flex justify-between items-start my-8 gap-1'>
+      <div className='lg:w-[60%] md:w-[80%] m-auto border-2 border-dashed p-4 border-gray-800 md:text-base text-[10px]'>
+        {/* <div className='flex justify-between items-start my-8 gap-1'> */}
+        <div className='grid grid-cols-2 items-start my-4 md:text-sm lg:text-base '>
           <div>
-            <p>Customer Name: <span className='text-gray-700 font-semibold'>{input.customerName}</span></p>
-            <p>Email: <span className='text-gray-700 font-semibold'>{input.email}</span></p>
+            <p>Name: <span className='text-gray-700 font-semibold'>{input.customerName}</span></p>
             <p>Mobile No.: <span className='text-gray-700 font-semibold'>{input.mobileNum}</span></p>
             <p>payment: <span className='text-gray-700 font-semibold'>{paymentMethod}</span></p>
+            <p>Email: <span className='text-gray-700 font-semibold'>{input.email}</span></p>
           </div>
           <div>
             <p>Country: <span className='text-gray-700 font-semibold'>{input.country}</span></p>
@@ -31,7 +32,7 @@ const Invoice = () => {
           <thead>
             <tr>
               <th>S.No</th>
-              <th>Products</th>
+              <th className='text-start'>Products</th>
               <th>Quantity</th>
               <th>Price</th>
             </tr>
@@ -55,14 +56,14 @@ const Invoice = () => {
 
           {offerSelected !== null ?
             <div className='relative'>
-              <span>Total price: ${(totalAmount - totalAmount * offerSelected.value).toFixed(2)}</span>
-              <span className='flex justify-center items-center absolute text-green-500 text-[10px] w-full top-5 left-4'>
+              <span>Total price: <span className='font-ubunt text-yellow-700'>${(totalAmount - totalAmount * offerSelected.value).toFixed(2)}</span> </span>
+              <span className='flex justify-center items-center absolute text-green-500 text-[10px] w-[150px] top-5 -right-4'>
                 <TiTick color='greeen' size={20} />
                 <span >
                   {offerSelected.coupon} discount applied</span>
               </span>
             </div>
-             :
+            :
             <span>Total Price: <span className='font-ubunt text-yellow-700'>${totalAmount.toFixed(2)}</span></span>
           }
         </div>

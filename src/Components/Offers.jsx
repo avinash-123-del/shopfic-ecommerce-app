@@ -67,7 +67,7 @@ const Offers = () => {
 
                 <div className='flex md:flex-row flex-col justify-between items-center gap-6 md:ml-4'>
                     {discount.map((e) => (
-                        <div onClick={() => handleOffer(e)} key={e.id} className={`${selectedDiscount === e.id && 'shadow-inner shadow-green-800'} flex flex-col  px-4 py-2 rounded-md cursor-pointer`}>
+                        <div onClick={() => handleOffer(e)} key={e.id} className={`${selectedDiscount === e.id ? 'shadow-inner shadow-green-800' : 'shadow-md'} flex flex-col  px-4 py-2 rounded-md cursor-pointer `}>
                             <span className='font-bold font-ubunt text-sky-700'>{e.coupon}</span>
                             <span className='text-[12px] w-full text-green-600'>{e.details}</span>
                         </div>
