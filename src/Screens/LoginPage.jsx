@@ -19,7 +19,7 @@ const LoginPage = () => {
 
 
   return (
-    <div className='lg:flex justify-around items-start relative h-screen overflow-hidden pt-5'>
+    <div className='lg:flex justify-around items-start relative  overflow-hidden pt-5'>
 
       <div className='flex flex-col justify-center items-start z-10 lg:pl-20 text-sm pl-2 lg:w-[70%] xl:w-full'>
         <div className='flex items-center font-lilita justify-start w-[480px] '>
@@ -34,13 +34,13 @@ const LoginPage = () => {
         </div>
       </div>
 
-      <div className='lg:w-full w-screen sm:w-screen m-auto mt-[50px]  lg:mt-[100px] mr-20 px-4 shadow-lg'>
+      <div className='lg:w-full w-screen sm:w-screen m-auto mt-[50px]  lg:mt-[100px] mr-20 px-4 py-2 lg:border-2 shadow-lg'>
        {auth ? <LoginForm /> : <SignupForm/>} 
         
       </div>
       
-      <span className='animate-trolly absolute bottom-[50px] md:bottom-0 left-0 w-screen z-10'>
-        <img className='md:w-[200px] w-[100px] ' src="/trolly.png" alt="" />
+      <span className=' absolute bottom-[-10px] animate-trolly md:bottom-0 left-0 w-screen z-50'>
+        <img className=' md:w-[150px] w-[100px] ' src="/trolly.png" alt="" />
       </span>
 
 

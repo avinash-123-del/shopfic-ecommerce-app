@@ -51,7 +51,7 @@ const SignupForm = () => {
 
         <div className='flex justify-start items-center py-4'>
 
-          <button type="submit" className="text-white bg-green-700 hover:bg-green-800 focus:ring-4 focus:outline-none focus:ring-green-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800">Signup</button>
+          <button type="submit" className="text-white bg-green-700 hover:bg-green-800 focus:ring-4 focus:outline-none focus:ring-green-300 font-medium rounded-lg text-sm w-[40%] md:w-[20%] sm:w-auto px-2 py-2.5 text-center dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800">Signup</button>
           <p >Already have an account, please <span className='italic text-blue-600 cursor-pointer z-40' onClick={() => setAuth(true)}>Login</span></p>
         </div>
 

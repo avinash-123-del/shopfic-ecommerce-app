@@ -10,7 +10,7 @@ const Invoice = () => {
   const nav = useNavigate()
   return (
     <div>
-      <div className='lg:w-[60%] md:w-[80%] m-auto border-2 border-dashed p-4 border-gray-800 md:text-base text-[10px]'>
+      <div className='lg:w-[60%] md:w-[80%] w-[90%] m-auto border-2 border-dashed p-4 border-gray-800 md:text-base text-[10px]'>
         {/* <div className='flex justify-between items-start my-8 gap-1'> */}
         <div className='grid grid-cols-2 items-start my-4 md:text-sm lg:text-base '>
           <div>

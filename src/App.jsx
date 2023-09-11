@@ -10,6 +10,7 @@ import LoginPage from './Screens/LoginPage'
 import { ProductDataContext } from './Components/ContextProvider'
 import AppScreen from './AppScreen/AppScreen'
 import ProductDetailPage from './Screens/ProductDetailPage'
+import Footer from './Components/Footer'
 const App = () => {
   const { isLoggedIn } = useContext(ProductDataContext)
   return (
@@ -25,6 +26,7 @@ const App = () => {
           <Route path='invoice' element={<div className='mt-10 w-[95%] m-auto'><Invoice /></div>} />
         </Route>
       </Routes>
+      <Footer/>
     </div>
   )
 }
