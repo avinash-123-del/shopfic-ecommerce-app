@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom'
 const Footer = () => {
     return (
         <div className=' bg-gray-400 mt-12'>
-        <footer className="bg-white dark:bg-gray-900 text-[10px] lg:text-base mt-[20px] lg:mt-[80px] w-screen overflow-x-hidden">
+        <footer className="bg-gray-900 text-[10px] lg:text-base mt-[20px] lg:mt-[80px] w-screen overflow-x-hidden">
             <div className="mx-auto  overflow-x-hidden p-4 px-10 lg:py-8">
                 <div className="md:flex md:justify-between">
                     <div className='flex items-center font-lilita justify-start md:mb-8 mb-4'>
